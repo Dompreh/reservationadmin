@@ -13,7 +13,7 @@ const NewHotel = () => {
   const [info, setInfo] = useState({});
   const [rooms, setRooms] = useState([])
   const navigate = useNavigate();
-  const {data, error, loading} = useFetch("https://reservationadmin.onrender.com/rooms")
+  const {data, error, loading} = useFetch("https://reservationapi.onrender.com/rooms")
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -34,7 +34,7 @@ const NewHotel = () => {
           data.append("file", file);
           data.append("upload_preset", "upload");
           const uploadRes = await axios.post(
-            "https://reservationadmin.onrender.com/https://api.cloudinary.com/v1_1/dfdskbz00/image/upload",
+            "https://reservationapi.onrender.com/https://api.cloudinary.com/v1_1/dfdskbz00/image/upload",
             data
           );
     

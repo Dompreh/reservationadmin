@@ -25,7 +25,7 @@ const NewRoom = () => {
     const roomNumbers = rooms.split(',').map(room=>({Number:room}))
     // console.log(roomNumbers)
     try {
-      await axios.post(`/rooms/${hotelId}`, {...info, roomNumbers})
+      await axios.post(`https://reservationapi.onrender.com/rooms/${hotelId}`, {...info, roomNumbers})
       navigate('/rooms')
     } catch (error) {
       console.log(error)

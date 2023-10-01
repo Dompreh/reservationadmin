@@ -45,7 +45,7 @@ const NewHotel = () => {
         })
       )
       const  newHotel ={...info, rooms, photos:list}
-      await axios.post("/hotels", newHotel)
+      await axios.post("https://reservationapi.onrender.com/hotels", newHotel)
       navigate('/hotels')
     }
     catch(err){

@@ -18,7 +18,7 @@ const Datatable = ({columns}) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/${path}/${id}`);
+      await axios.delete(`https://reservationapi.onrender.com/${path}/${id}`);
       setList(list.filter((item) => item._id !== id));
     } catch (error) {}
   };

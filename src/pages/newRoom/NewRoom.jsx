@@ -14,7 +14,7 @@ const NewRoom = () => {
   const [rooms, setRooms] = useState([])
 
   const navigate = useNavigate();
-  const { data, error, loading } = useFetch("/hotels");
+  const { data, error, loading } = useFetch("https://reservationadmin.onrender.com/hotels");
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
